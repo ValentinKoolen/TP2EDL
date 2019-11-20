@@ -101,13 +101,13 @@ class GumballMachine
 	    return $user['maximum'];
 	}
 	
-	public function InsertC($intitule, $duree , $id_prof)
+	public function InsertC($bdd, $intitule, $duree , $id_prof)
 	{
 	    try
 	    {
-	        $this->bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 	        $sql = "INSERT INTO cours (intitule, duree, id_prof) VALUES ('$intitule','$duree', '$id_prof')";
-	        $this->bdd->exec($sql);
+	        $bdd->exec($sql);
 	        return "good job";
 	    }
 	    catch(PDOException $e)
