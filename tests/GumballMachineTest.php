@@ -80,12 +80,12 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     public function testInsertC()
     {       
         $max__id1=$this->gumballMachineInstance->GetLastIDC();
-        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule,$this->duree,$this->GetIdP(XXX1,YYY1)));
-        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule1,$this->duree1,$this->GetIdP(XXX2,YYY2)));
-        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule2,$this->duree2,$this->GetIdP(XXX3,YYY3)));
-        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule3,$this->duree3,$this->GetIdP(XXX3,YYY3)));
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule,$this->duree,$this->GetIdP($this->nom,$this->prenom)));
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule1,$this->duree1,$this->GetIdP($this->nom1,$this->prenom1)));
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule2,$this->duree2,$this->GetIdP($this->nom2,$this->prenom2)));
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule3,$this->duree3,$this->GetIdP($this->nom2,$this->prenom2)));
         $max__id2=$this->gumballMachineInstance->GetLastIDC();
-        $this->assertEquals($max__id1+3,$max__id2);
+        $this->assertEquals($max__id1+4,$max__id2);
     }
   
     public function testAffichageCoursAPI()
