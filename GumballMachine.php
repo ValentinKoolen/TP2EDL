@@ -6,7 +6,7 @@ class GumballMachine
 	private $gumballs;
 	
 	private $bdd;
-	/* Paramètre de connexion à la base de données*/
+	/* ParamÃ¨tre de connexion Ã  la base de donnÃ©es*/
 	private $servername="localhost";
 	private $db_name="mydb1"; //a remplir
 	private $db_user="myuser1"; //a remplir
@@ -82,7 +82,8 @@ class GumballMachine
 	    $stmt = $this->bdd->prepare("select id from prof where nom=? and prenom=?");
 	    $stmt->execute([$nom,$prenom]); 
 	    $user = $stmt->fetch();
-	    return $user['id'];
+	    if is_array($user['id']) return $user['id'][0];
+	    else return $user['id'];
 	}
 	public function GetLastIDP()
 	{
