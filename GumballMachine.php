@@ -82,8 +82,9 @@ class GumballMachine
 	    $stmt = $this->bdd->prepare("select id from prof where nom=? and prenom=?");
 	    $stmt->execute([$nom,$prenom]); 
 	    $user = $stmt->fetch();
-	    if is_array($user['id']) return $user['id'][0];
-	    else return $user['id'];
+	    echo $user['id'];
+	    return $user['id'];
+	
 	}
 	
 	public function GetLastIDP()
