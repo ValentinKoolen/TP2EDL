@@ -45,8 +45,8 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     
     public static function setUpBeforeClass()
     {
-        $this->gumballMachineInstance = new GumballMachine();
-        $this->gumballMachineInstance->DropData();
+        self::$gumballMachineInstance = new GumballMachine();
+        self::$gumballMachineInstance->DropData();
     }
         
     public function setUp()
