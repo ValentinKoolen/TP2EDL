@@ -35,13 +35,13 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     
      // cours2
     private $intitule2="C++"; //a remplir
-    private $duree="18";    //a remplir
+    private $duree2="18";    //a remplir
     
     
      // cours3
     private $intitule3="EDL"; //a remplir
-    private $duree="30";    //a remplir
-    private $id_prof="50";
+    private $duree3="30";    //a remplir
+    
     
     
         
