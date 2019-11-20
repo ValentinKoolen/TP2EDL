@@ -45,13 +45,13 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     
     public static function setUpBeforeClass()
     {
-        self::$gumballMachineInstance = new GumballMachine();
-        self::$gumballMachineInstance->DropData();
     }
         
     public function setUp()
     {
                
+        $this->gumballMachineInstance = new GumballMachine();
+        
         
     }
     
@@ -81,6 +81,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     }
     public function testInsertC()
     {       
+        $this->gumballMachineInstance->DropData();
         $max__id1=$this->gumballMachineInstance->GetLastIDC();
         $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule,$this->duree,$this->GetIdP($this->nom,$this->prenom)));
         $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule1,$this->duree1,$this->GetIdP($this->nom1,$this->prenom1)));
