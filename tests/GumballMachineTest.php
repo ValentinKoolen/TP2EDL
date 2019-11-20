@@ -104,7 +104,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     public function testUpdateP()
     {
        
-       $this->assertEquals(true,$this->gumballMachineInstance->UpdateP($this->gumballMachineInstance->getDB(),$this->nom,"Joe"));
+       $this->assertEquals(true,$this->gumballMachineInstance->UpdateP($this->gumballMachineInstance->getDB(),$this->nom,$Nom=Joe));
         
       
        
