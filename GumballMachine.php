@@ -134,9 +134,20 @@ class GumballMachine
 	    }
 	    
 	}
-	public function UpdateP()
+	public function UpdateP($bdd, $nom, Nom )
 	{
-	    
+	     try 
+	    {
+	       $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	       $sql = "UPDATE prof SET nom=Nom WHERE nom=$nom ";
+	       $bdd->exec($sql);
+	       return true;
+	    }
+	    catch(PDOException $e)
+	    {
+	        echo $sql . "<br>" . $e->getMessage();
+	        return false;
+	    }
 	}
 	
 	public function DeleteP()
