@@ -85,9 +85,17 @@ class GumballMachine
 	    if is_array($user['id']) return $user['id'][0];
 	    else return $user['id'];
 	}
+	
 	public function GetLastIDP()
 	{
 	    $stmt = $this->bdd->prepare("select max(id) as maximum from prof");
+	    $stmt->execute();
+	    $user = $stmt->fetch();
+	    return $user['maximum'];
+	}
+	public function GetLastIDC()
+	{
+	    $stmt = $this->bdd->prepare("select max(id) as maximum from cours");
 	    $stmt->execute();
 	    $user = $stmt->fetch();
 	    return $user['maximum'];
