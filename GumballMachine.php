@@ -82,7 +82,6 @@ class GumballMachine
 	    $stmt = $this->bdd->prepare("select id from prof where nom=? and prenom=?");
 	    $stmt->execute([$nom,$prenom]); 
 	    $user = $stmt->fetch();
-	    echo $user['id'];
 	    return $user['id'];
 	
 	}
@@ -118,6 +117,23 @@ class GumballMachine
 	    
 	}
 	
+	public function DropData(
+	{
+	    try
+	    {
+	        $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	        $sql = "DELETE from cours";
+	        $bdd->exec($sql);
+		$sql = "DELETE from prof";
+		$bdd->exec($sql); 
+	        return "good job";
+	    }
+	    catch(PDOException $e)
+	    {
+	        echo $sql . "<br>" . $e->getMessage();
+	    }
+	    
+	}
 	public function UpdateP()
 	{
 	    
