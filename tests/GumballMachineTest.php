@@ -24,8 +24,25 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     private $lieu_naissance2="ZZZ3"; // a changer
     
     // cours
-    private $intitule="***"; //a remplir
-    private $duree="***";    //a remplir
+    private $intitule="IOT"; //a remplir
+    private $duree="10";    //a remplir
+    private $id_prof=GetIdP(XXX1,YYY1);
+    
+     // cours1
+    private $intitule1="IA"; //a remplir
+    private $duree1="12";    //a remplir
+    private $id_prof1=GetIdP(XXX2,YYY2);
+    
+     // cours2
+    private $intitule2="C++"; //a remplir
+    private $duree="18";    //a remplir
+    private $id_prof2=GetIdP(XXX3,YYY3);
+    
+     // cours3
+    private $intitule3="EDL"; //a remplir
+    private $duree="30";    //a remplir
+    private $id_prof="50";
+    private $id_prof3=GetIdP(XXX3,YYY3);
     
         
     public function setUp()
@@ -46,6 +63,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
         $max__id2=$this->gumballMachineInstance->GetLastIDP();
         $this->assertEquals($max__id1+3,$max__id2);
     }
+    
     public function testAffichageProfAPI()
     {
         /*à completer*/
@@ -58,8 +76,15 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     }
     public function testInsertC()
     {       
-       
+        $max__id1=$this->gumballMachineInstance->GetLastIDC();
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule,$this->duree,$this->id_prof));
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule1,$this->duree1,$this->id_prof1));
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule2,$this->duree2,$this->id_prof2));
+        $this->assertEquals(true,$this->gumballMachineInstance->InsertC($this->gumballMachineInstance->getDB(),$this->intitule3,$this->duree3,$this->id_prof3));
+        $max__id2=$this->gumballMachineInstance->GetLastIDC();
+        $this->assertEquals($max__id1+3,$max__id2);
     }
+  
     public function testAffichageCoursAPI()
     {
         /*à completer*/
