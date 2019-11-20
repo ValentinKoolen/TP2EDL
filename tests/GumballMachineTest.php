@@ -8,19 +8,19 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     //prof1
     private $nom="XXX1"; // a changer
     private $prenom="YYY1"; // a changer
-    private $date_naissance="29-09-1980"; // a changer
+    private $date_naissance="1980-09-29"; // a changer
     private $lieu_naissance="ZZZ1"; // a changer
     
      //prof2
     private $nom1="XXX2"; // a changer
     private $prenom1="YYY2"; // a changer
-    private $date_naissance1="30-10-1981"; // a changer
+    private $date_naissance1="1981-10-30"; // a changer
     private $lieu_naissance1="ZZZ2"; // a changer
      
      //prof3
     private $nom2="XXX3"; // a changer
     private $prenom2="YYY3"; // a changer
-    private $date_naissance2="31-12-1982"; // a changer
+    private $date_naissance2="1982-12-31"; // a changer
     private $lieu_naissance2="ZZZ3"; // a changer
     
     // cours
