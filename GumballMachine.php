@@ -149,6 +149,21 @@ class GumballMachine
 	        return false;
 	    }
 	}
+	public function UpdateC($bdd, $IntituleInitial, $Intitule )
+	{
+	     try 
+	    {
+	       $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	       $sql = "UPDATE cours SET intitule='$INTITULE' WHERE intitule='$IntituleInitial' ";
+	       $bdd->exec($sql);
+	       return true;
+	    }
+	    catch(PDOException $e)
+	    {
+	        echo $sql . "<br>" . $e->getMessage();
+	        return false;
+	    }
+	}
 	
 	public function DeleteP()
 	{
