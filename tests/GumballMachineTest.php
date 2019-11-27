@@ -132,7 +132,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     }
     public function testDeleteC()
     {
-       $this->assertEquals(true,$this->gumballMachineInstance->DeleteC($this->gumballMachineInstance->getDB(),2));     
+       $this->assertEquals(true,$this->gumballMachineInstance->DeleteC($this->gumballMachineInstance->getDB(),165));     
     }
      public function testAffichageCoursPD()
     {
