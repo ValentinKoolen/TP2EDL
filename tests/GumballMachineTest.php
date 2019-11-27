@@ -4,6 +4,7 @@ require 'GumballMachine.php';
 
 class GumballMachineTest extends PHPUnit_Framework_TestCase
 {
+    
     public $gumballMachineInstance;
     //prof1
     private $nom="XXX1"; // a changer
