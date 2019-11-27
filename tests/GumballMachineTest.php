@@ -118,7 +118,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
        $this->assertEquals(true,$this->gumballMachineInstance->UpdateP($this->gumballMachineInstance->getDB(),$this->intitule1,$this->INTITULE));   
     }
    
-    public function testAffichageCoursAVI()
+    public function testAffichageCoursPU()
     {
         $this->assertEquals(true,$this->gumballMachineInstance->AffichageCours("After Update of Cours"));
     }
