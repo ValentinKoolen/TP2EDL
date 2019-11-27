@@ -149,7 +149,7 @@ class GumballMachine
 	        return false;
 	    }
 	}
-	public function UpdateC($bdd, $IntituleInitial, $Intitule )
+	public function UpdateC($bdd, $IntituleInitial, $INTITULE )
 	{
 	     try 
 	    {
