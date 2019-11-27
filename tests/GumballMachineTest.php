@@ -10,7 +10,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     private $prenom="YYY1"; // a changer
     private $date_naissance="1980-09-29"; // a changer
     private $lieu_naissance="ZZZ1"; // a changer
-    
+    private $NOM="Joe";
      //prof2
     private $nom1="XXX2"; // a changer
     private $prenom1="YYY2"; // a changer
@@ -104,7 +104,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     public function testUpdateP()
     {
        
-       $this->assertEquals(true,$this->gumballMachineInstance->UpdateP($this->gumballMachineInstance->getDB(),$this->nom,$Nom="Joe"));
+       $this->assertEquals(true,$this->gumballMachineInstance->UpdateP($this->gumballMachineInstance->getDB(),$this->nom,$NOM));
         
       
        
