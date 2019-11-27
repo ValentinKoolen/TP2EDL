@@ -31,6 +31,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
      // cours1
     private $intitule1="IA"; //a remplir
     private $duree1="12";    //a remplir
+    private $INTITULE="IAAAAAAA";
 
     
      // cours2
@@ -103,11 +104,11 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
 
     public function testUpdateP()
     {
-       
-       $this->assertEquals(true,$this->gumballMachineInstance->UpdateP($this->gumballMachineInstance->getDB(),$this->nom,$this->NOM));
-        
-      
-       
+       $this->assertEquals(true,$this->gumballMachineInstance->UpdateP($this->gumballMachineInstance->getDB(),$this->nom,$this->NOM));   
+    }
+    public function testUpdateC()
+    {
+       $this->assertEquals(true,$this->gumballMachineInstance->UpdateP($this->gumballMachineInstance->getDB(),$this->intitule1,$this->INTITULE));   
     }
    
 }
