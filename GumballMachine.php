@@ -3,9 +3,7 @@
 class GumballMachine
 {
 
-	private $gumballs;
-	
-	
+	private $gumballs;	
 	private $bdd;
 	/* Paramètre de connexion à la base de données*/
 	private $servername="localhost";
