@@ -58,13 +58,12 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     
     public function testAffichageProfAVI()
     {
+        $this->gumballMachineInstance->DropData();
         $this->assertEquals(true,$this->gumballMachineInstance->AffichageProf("Before Insertion of Professors"));
     }
     
     public function testInsertP()
-    {
-        $this->gumballMachineInstance->DropData();
-        
+    {       
         $this->assertEquals(true,$this->gumballMachineInstance->InsertP($this->gumballMachineInstance->getDB(),$this->nom,$this->prenom,$this->date_naissance,$this->lieu_naissance));
         $max__id1=$this->gumballMachineInstance->GetLastIDP();
         $this->assertEquals(true,$this->gumballMachineInstance->InsertP($this->gumballMachineInstance->getDB(),$this->nom1,$this->prenom1,$this->date_naissance1,$this->lieu_naissance1)); 
@@ -115,7 +114,7 @@ class GumballMachineTest extends PHPUnit_Framework_TestCase
     
     public function testUpdateC()
     {
-       $this->assertEquals(true,$this->gumballMachineInstance->UpdateP($this->gumballMachineInstance->getDB(),$this->intitule1,$this->INTITULE));   
+       $this->assertEquals(true,$this->gumballMachineInstance->UpdateC($this->gumballMachineInstance->getDB(),$this->intitule1,$this->INTITULE));   
     }
    
     public function testAffichageCoursPU()
